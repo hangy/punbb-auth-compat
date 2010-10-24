@@ -42,7 +42,7 @@ function wp_check_password($password, $hash, $user_id = '') {
 	$hash_length = strlen($hash);
 
 	// If the hash is still md5 ...
-	if ( $hash_length <= 32 ) {
+	if ( 32 == $hash_length ) {
 		$check = ( $hash == md5($password) );
 		if ( $check && $user_id ) {
 			// Rehash using new hash.
@@ -57,7 +57,7 @@ function wp_check_password($password, $hash, $user_id = '') {
 	}
 
 	// If the hash has the length of SHA1, we assume it is PunBB's salted SHA1 version.
-	if ( $hash_length <= 40 && $user_id ) {
+	if ( 40 == $hash_length && $user_id ) {
 		$salt = get_punbb_salt($user_id);
 		$check = ( $hash == punbb_hash($password, $punbb_salt) );
 		if ( $check ) {
