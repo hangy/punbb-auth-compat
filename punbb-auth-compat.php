@@ -1,8 +1,8 @@
 <?php
 /*
  Plugin Name: PunBB to WordPress Adapter
- Plugin URI: http://github.com/hangy/punbb_to_wordpress
- Description: Tries to migrate PunBB passwords to WordPress and Simple:Press.
+ Plugin URI: http://github.com/hangy/punbb-to-wordpress
+ Description: Provides backwards compatibility for PunBB passwords.
  Version: 0.1
  Author: hangy
  Author URI: http://hangy.de/
