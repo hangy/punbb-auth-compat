@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: PunBB to WordPress Adapter
- Plugin URI: http://github.com/hangy/punbb-to-wordpress
+ Plugin URI: http://github.com/Warsow/punbb-auth-compat
  Description: Provides backwards compatibility for PunBB passwords.
  Version: 0.1
  Author: hangy
