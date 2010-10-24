@@ -59,7 +59,7 @@ function wp_check_password($password, $hash, $user_id = '') {
 	// If the hash has the length of SHA1, we assume it is PunBB's salted SHA1 version.
 	if ( 40 == $hash_length && $user_id ) {
 		$salt = get_punbb_salt($user_id);
-		$check = ( $hash == punbb_hash($password, $punbb_salt) );
+		$check = ( $hash == punbb_hash($password, $salt) );
 		if ( $check ) {
 			// Rehash using new hash.
 			wp_set_password($password, $user_id);
